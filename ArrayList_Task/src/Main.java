@@ -8,9 +8,6 @@ public class Main {
         try {
             for (int i = 0; i < numbers.size(); i++) {
                 if (numbers.get(i).equalsIgnoreCase(oldElement)) {
-                    System.out.print("\nEnter a new value: ");
-                    Scanner input = new Scanner(System.in);
-                    newValue = input.nextLine();
                     numbers.set(i, newValue);
                 }
             }
@@ -38,9 +35,15 @@ public class Main {
         System.out.println("\nArrayList before replacing an element: ");
         System.out.print(numbers + " ");
 
+        // here we enter the value to be removed
         System.out.print("\n\nEnter an element to remove from the ArrayList: ");
         Scanner accept = new Scanner(System.in);
         oldElement = accept.nextLine();
+
+        // here enter new value to replace the old value
+        System.out.print("\nEnter a new value: ");
+        Scanner input = new Scanner(System.in);
+        newValue = input.nextLine();
 
         Main m = new Main();
 
